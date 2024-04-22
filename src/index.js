@@ -246,9 +246,7 @@ export * from './components/badge/FBadge.vue'
 // FWidgetCard
 export { default as FWidgetCard } from './components/widget-card/FWidgetCard.vue'
 export * from './components/widget-card/FWidgetCard.vue'
-// FMapWidget
-export { default as FMapWidget } from './components/map-widget/FMapWidget.vue'
-export * from './components/map-widget/FMapWidget.vue'
+
 // FAvatarGroup
 export { default as FAvatarGroup } from './components/avatar-group/FAvatarGroup.vue'
 export * from './components/avatar-group/FAvatarGroup.vue'
