@@ -1,0 +1,29 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs'
+import util from './utils'
+
+<Meta title="Tokens/Colors" />
+
+## Alias Color Tokens
+
+The alias tokens are the token that are directly used in the core dsm components, they use the global tokens values and based on
+themes, the tokens values might change. For using an alias tokens in a dsm component,
+you can use it like this `$colors.backgroundPrimaryDefault`
+
+### Default Theme
+
+<ColorPalette style={{ paddingTop: '20px' }}>
+  {Object.entries(util.aliasColors).map(([key, value]) => {
+    return <ColorItem key={key} title={`${key}`} colors={value} />
+  })}
+</ColorPalette>
+
+## Global Color Tokens
+
+These are the global color tokens of the design system. For using an global tokens in a dsm component,
+you can use it like this `$global.colors.blue60`
+
+<ColorPalette style={{ paddingTop: '20px' }}>
+  {Object.entries(util.globalColors).map(([key, value]) => {
+    return <ColorItem key={key} title={`${key}`} colors={value} />
+  })}
+</ColorPalette>

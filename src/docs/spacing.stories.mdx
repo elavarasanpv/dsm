@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/addon-docs'
+import utils from './utils'
+
+<Meta title="Tokens/Spacing" />
+
+## Alias Spacing Tokens
+
+### Default
+
+<table>
+  <tbody>
+    {Object.entries(utils.aliasSpacing).map(([key, value]) => (
+      <tr key={key}>
+        <td>
+          <code>{`$spacing.${key}`}</code>
+        </td>
+        <td style={{ padding: '20px' }}>
+          <div
+            style={{
+              width: value,
+              height: value,
+              backgroundColor: utils.globalColors.blue.blue30,
+            }}
+          />
+        </td>
+        <td style={{ padding: '20px' }}>{value}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Global Spacing Tokens
+
+<table>
+  <tbody>
+    {Object.entries(utils.globalSpacing).map(([key, value]) => (
+      <tr key={key}>
+        <td>
+          <code>{`$global.spacing.${key}`}</code>
+        </td>
+        <td style={{ padding: '20px' }}>
+          <div
+            style={{
+              width: value,
+              height: value,
+              backgroundColor: utils.globalColors.blue.blue30,
+            }}
+          />
+        </td>
+        <td style={{ padding: '20px' }}>{value}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>

@@ -1,0 +1,58 @@
+import { Meta } from '@storybook/addon-docs'
+import utils from './utils'
+
+<Meta title="Tokens/Radius" />
+
+## Alias Border Radius Tokens
+
+### Default
+
+<table>
+  <tbody>
+    {Object.entries(utils.aliasBr).map(([key, value]) => (
+      <tr key={key}>
+        <td>
+          <code>{`$border.${key}`}</code>
+        </td>
+        <td style={{ padding: '20px' }}>
+          <div
+            style={{
+              width: '64px',
+              height: '64px',
+              backgroundColor: 'hsla(220, 30%, 96%, 1)',
+              border: '1px solid hsla(216, 15%, 54%, 0.18)',
+              borderRadius: value,
+            }}
+          />
+        </td>
+        <td style={{ padding: '20px' }}>{value}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Global Spacing Tokens
+
+<table>
+  <tbody>
+    {Object.entries(utils.globalBr).map(([key, value]) => (
+      <tr key={key}>
+        <td>
+          <code>{`$global.border.${key}`}</code>
+        </td>
+        <td style={{ padding: '20px' }}>
+          <div
+            style={{
+              width: '64px',
+              height: '64px',
+              backgroundColor: 'hsla(220, 30%, 96%, 1)',
+              border: '1px solid hsla(216, 15%, 54%, 0.18)',
+              borderRadius: value,
+            }}
+          />
+        </td>
+        <td style={{ padding: '20px' }}>{value}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>

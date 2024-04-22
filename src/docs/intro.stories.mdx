@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Guides/Intro" />
+
+<div style={{ margin: '0 auto', maxWidth: '600px', textAlign: 'center' }}>
+
+<h1 align="center">Facilio Design System</h1>
+</div>
+
+# 📦 Getting Started
+
+## Installation
+
+```shell
+npm i @facilio/design-system
+```
+
+## Usage
+
+```jsx
+<template>
+  <Button appearance="primary">Click Me</Button>
+</template>
+
+<script>
+import { Button } from "@facilio/design-system";
+export default {
+  components: { Button },
+};
+</script>
+```
+
+# Theming
+
+## Configuring Theme
+
+<p>
+  You can conifugre / override themes in facilio design system by using
+  `setTheme` method
+</p>
+
+```js
+import { setTheme } from '@facilio/design-system'
+
+setTheme({
+  type: 'default',
+  config: {
+    typography: {
+      appearances: {
+        heading: {
+          fontSize: '50px',
+        },
+      },
+    },
+  },
+})
+```
+
+The above example selects the default theme, and overrides the heading typography to have a font size of `50px`.
